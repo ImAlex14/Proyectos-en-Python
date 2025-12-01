@@ -14,6 +14,10 @@ def separate_choices(s, allowed):
         # elimina todos los espacios vacios al principio y final de todas las expresiones, asi como tambien aquellas expresiones vacias
     
     # No hay separadores -> intentar greedy match por tokens permitidos
+    """
+    En caso de que no hayan separadores usamos greedy match por tokens para que a partir de un indice un motor de busqueda intenta que un cuantificador
+    coincida con la coincidencia mas larga, es decir la mayor cantidad de tokens (letras). 
+    """
     allowed_sorted = sorted(allowed, key=len, reverse=True)
     parts = []
     pos = 0
@@ -59,6 +63,6 @@ else:
     if "symbols" in valid:
         charset.append(string.punctuation)
     for _ in range(str_size):
-        letras.append(random.choice(random.choice(charset)))
+        letras.append(random.choice(random.choice(charset))) # usamos secrets choice para tener entropia criptografica y hacer mas aleatorios los resultados
     result = "".join(letras)
     print(result)
