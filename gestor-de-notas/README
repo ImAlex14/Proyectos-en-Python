@@ -1,0 +1,15 @@
+Programa por consola de gestor de notas:
+
+- poder registrar nuevos usuarios (pedir nombre, contraseña y correo electronico) ✅
+
+- poder logearse si ya existe el usuario (pedir correo y contraseña) ✅
+
+- poder crear notas (pedir nombre y el contenido)
+
+- poder mostrar todas las notas (listarlas con los nombres)
+
+- poder eliminar una nota (pedir el nombre de la nota)
+
+- poder finalizar el programa
+
+- crear una bd para almacenar todos los datos anteriores ✅
